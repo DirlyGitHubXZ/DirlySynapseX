@@ -1,1 +1,10 @@
-Omaganowayyeyeyeye123@
+game:GetService("ReplicatedStorage").CloudFrameShared.DataStreams.processGameItemSold:InvokeServer("SellEverything")
+game:GetService'RunService'.RenderStepped:Connect(function()
+   task.spawn(function()
+       for i=0,1000,1 do
+           game:GetService("ReplicatedStorage").CloudFrameShared.DataStreams.FishBiting:InvokeServer()
+           game:GetService("ReplicatedStorage").CloudFrameShared.DataStreams.FishCaught:FireServer()
+           game:GetService("ReplicatedStorage").CloudFrameShared.DataStreams.processGameItemSold:InvokeServer("SellEverything")
+       end
+   end)
+end)
